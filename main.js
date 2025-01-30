@@ -1,13 +1,18 @@
+// by .nulltrace on discord
 window.onload = function() {
+  alert("backwoods was here, .nulltrace on discord");
+
   setTimeout(function() {
-    const spanElement = document.querySelector('.first');
+    const spanElement = document.querySelector('span[data-set="user-profile"]');
     if (spanElement) {
-      spanElement.innerText = 'backwoods was here';
-      tippy(spanElement, {
-        content: 'This is a tooltip!',
-      });
+      const imgElement = spanElement.querySelector('img');
+      if (imgElement) {
+        imgElement.src = 'x';
+      } else {
+        console.warn('1!');
+      }
     } else {
-      console.warn('Element with class "first" not found!');
+      console.warn('2!');
     }
   }, 1500);
 };
